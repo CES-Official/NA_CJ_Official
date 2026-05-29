@@ -1,0 +1,278 @@
+  <!-- Quiz Section -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Discover Your Current Powers</h2>
+            <p class="section-subtitle">Take this quick 5-question assessment to find out how much your powers are already developed!</p>
+            
+            <div class="quiz-container">
+                <div id="quiz-progress" class="quiz-progress">
+                    <div class="progress-bar" id="progress-bar"></div>
+                    <p class="progress-text">Question <span id="current-question">1</span> of 5</p>
+                </div>
+                
+                <div id="quiz-content">
+                    <!-- Question 1 -->
+                    <div class="quiz-question-block" data-question="1">
+                        <h3 class="quiz-question">When you face an issue repeatedly, how do you handle it?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="answerQuestion(1, 'pichu')" role="option">
+                                Come up with new ideas and creative solutions
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(1, 'pikachu')" role="option">
+                                Break it down step-by-step to find the answer
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(1, 'raichu')" role="option">
+                                Talk it through with others and get different perspectives
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(1, 'mewtwo')" role="option">
+                                Research and use technology to explore possibilities
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 2 -->
+                    <div class="quiz-question-block" data-question="2" style="display: none;">
+                        <h3 class="quiz-question">What kind of activities energize you the most?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="answerQuestion(2, 'pichu')" role="option">
+                                Artistic, design-focused, or hands-on creative projects
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(2, 'pikachu')" role="option">
+                                Puzzles, math, science experiments, or analytical work
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(2, 'raichu')" role="option">
+                                Group discussions, debates, or helping others
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(2, 'mewtwo')" role="option">
+                                Learning new software, coding, or digital tools
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 3 -->
+                    <div class="quiz-question-block" data-question="3" style="display: none;">
+                        <h3 class="quiz-question">How do you prefer to learn new information?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="answerQuestion(3, 'pichu')" role="option">
+                                Through examples, visuals, stories, and real-world applications
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(3, 'pikachu')" role="option">
+                                With clear facts, logical progressions, and detailed explanations
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(3, 'raichu')" role="option">
+                                By discussing with others and learning from different viewpoints
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(3, 'mewtwo')" role="option">
+                                By exploring interactive tools, videos, and digital resources
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="quiz-question-block" data-question="4" style="display: none;">
+                        <h3 class="quiz-question">In a group project, what's your typical role?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="answerQuestion(4, 'pichu')" role="option">
+                                Generating ideas and bringing the vision to life
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(4, 'pikachu')" role="option">
+                                Planning, organizing, and ensuring quality work
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(4, 'raichu')" role="option">
+                                Keeping everyone motivated and making sure everyone's heard
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(4, 'mewtwo')" role="option">
+                                Finding resources, researching, or handling technical aspects
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 5 -->
+                    <div class="quiz-question-block" data-question="5" style="display: none;">
+                        <h3 class="quiz-question">What would your ideal future career involve?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="answerQuestion(5, 'pichu')" role="option">
+                                Creating, designing, or developing new things
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(5, 'pikachu')" role="option">
+                                Solving problems and improving systems or processes
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(5, 'raichu')" role="option">
+                                Working with people to help them grow and succeed
+                            </button>
+                            <button class="quiz-option" onclick="answerQuestion(5, 'mewtwo')" role="option">
+                                Working with technology or innovation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-result" id="quizResult"></div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        // 5-Question Quiz functionality
+        let quizAnswers = {};
+        let currentQuestion = 1;
+        
+        function answerQuestion(questionNum, answer) {
+            // Store the answer
+            quizAnswers[questionNum] = answer;
+            
+            // Mark the button as selected
+            const buttons = document.querySelectorAll(`.quiz-question-block[data-question="${questionNum}"] .quiz-option`);
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            event.target.classList.add('selected');
+            
+            // Move to next question or show result
+            setTimeout(() => {
+                if (questionNum < 5) {
+                    // Hide current question and show next
+                    document.querySelector(`.quiz-question-block[data-question="${questionNum}"]`).style.display = 'none';
+                    document.querySelector(`.quiz-question-block[data-question="${questionNum + 1}"]`).style.display = 'block';
+                    
+                    // Update progress bar and counter
+                    currentQuestion = questionNum + 1;
+                    updateProgress();
+                } else {
+                    // All questions answered - calculate result
+                    showQuizResult();
+                }
+            }, 300);
+        }
+        
+function updateProgress() {
+    const progressPercent = (currentQuestion / 5) * 100;
+    document.getElementById('progress-bar').style.width = progressPercent + '%';
+    document.getElementById('current-question').textContent = currentQuestion;
+}
+
+function showQuizResult() {
+    // Calculate which competency appears most (matching actual quiz answers)
+    const competencies = { creative: 0, critical: 0, media: 0, safety: 0 };
+    Object.values(quizAnswers).forEach(answer => {
+        competencies[answer]++;
+    });
+    
+    // Find the dominant competency
+    let dominantStyle = 'creative';
+    let maxScore = 0;
+    for (const [style, score] of Object.entries(competencies)) {
+        if (score > maxScore) {
+            maxScore = score;
+            dominantStyle = style;
+        }
+    }
+    
+    const results = {
+        creative: {
+            title: "🎨 You're a Creative Genius",
+            image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=500&fit=crop",
+            imageAlt: "Creative artist painting with vibrant colors",
+            strength: "You see possibilities everywhere and turn ideas into reality.",
+            gap: "⚠️ Quick reality check: You might be creating amazing stuff, but are you checking if it's SAFE first? And do you know when AI's helping you vs. tricking you?",
+            action: "Your move: Before you share or create something, pause and ask: Is this safe? Is it real? Is it kind?"
+        },
+        critical: {
+            title: "🧠 You're a Critical Thinker",
+            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop",
+            imageAlt: "Student thinking deeply and analyzing information",
+            strength: "You question everything and dig deep to find the truth.",
+            gap: "⚠️ Quick reality check: You think critically, but do you know how to SPOT fake stuff visually? And have you thought about AI safety yet?",
+            action: "Your move: Start noticing HOW media tricks you, not just WHAT is true. Learn what AI can actually do."
+        },
+        media: {
+            title: "📰 You're a Media Detective",
+            image: "https://images.unsplash.com/photo-1554200876-56dca04dc23d?w=500&h=500&fit=crop",
+            imageAlt: "Detective with magnifying glass investigating clues",
+            strength: "You understand how content tricks people and where it comes from.",
+            gap: "⚠️ Quick reality check: You spot the game, but are you creative enough to make BETTER content? And how do you stay safe while investigating?",
+            action: "Your move: Don't just decode messages—create better ones. Protect yourself while you're digging."
+        },
+        safety: {
+            title: "🛡️ You're a Digital Ninja",
+            image: "https://images.unsplash.com/photo-1578482326082-86c69b564e7d?w=500&h=500&fit=crop",
+            imageAlt: "Ninja warrior in protective stance",
+            strength: "You think about safety first and protect yourself and others online.",
+            gap: "⚠️ Quick reality check: You're careful, but are you curious? Do you question what you see? Can you spot a fake or understand AI?",
+            action: "Your move: Stay safe AND get curious. Ask harder questions. Create bolder stuff."
+        }
+    };
+    
+    // Hide all questions
+    document.querySelectorAll('.quiz-question-block').forEach(block => {
+        block.style.display = 'none';
+    });
+    
+    const res = results[dominantStyle];
+    
+    // Create modal if it doesn't exist
+    let modal = document.getElementById('quizResultModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'quizResultModal';
+        modal.className = 'quiz-result-modal';
+        document.body.appendChild(modal);
+    }
+    
+    // Populate modal content
+    modal.innerHTML = `
+        <div class="quiz-result-modal-content">
+            <button class="quiz-result-close" onclick="closeQuizModal()">✕</button>
+            
+            <img src="${res.image}" alt="${res.imageAlt}" class="quiz-result-image">
+            
+            <h2 class="quiz-result-title">${res.title}</h2>
+            
+            <div class="quiz-result-strength">
+                <strong>${res.strength}</strong>
+            </div>
+            
+            <div class="quiz-result-gap">
+                ${res.gap}
+            </div>
+            
+            <div class="quiz-result-action">
+                <strong>${res.action}</strong>
+            </div>
+            
+            <div class="quiz-result-buttons">
+                <button class="quiz-result-btn quiz-result-btn-primary" onclick="scrollToRegistration(); closeQuizModal();">
+                    🚀 Join the Championship
+                </button>
+                <button class="quiz-result-btn quiz-result-btn-secondary" onclick="closeQuizModal()">
+                    Maybe Later
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Show modal with animation
+    modal.classList.add('show');
+}
+
+// Function to close the modal
+function closeQuizModal() {
+    const modal = document.getElementById('quizResultModal');
+    if (modal) {
+        modal.classList.remove('show');
+    }
+}
+
+// Close modal when clicking outside of it
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('quizResultModal');
+    if (modal && event.target === modal) {
+        closeQuizModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeQuizModal();
+    }
+});
+</script>

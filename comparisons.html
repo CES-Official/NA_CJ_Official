@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparisons & Benefits - Championship</title>
+    <link rel="icon" type="image/png" href="./Assets/Img/Icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Quicksand&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Colors - Vibrant and Child-Friendly */
+            --primary-yellow: #FFD93D;
+            --primary-blue: #37517e;
+            --primary-coral:  #37517e;
+            --primary-green: #6BCB77;
+            --primary-purple: #37517e;
+            --primary-orange: #FF9F45;
+            
+            /* Neutral Colors */
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --gray: #E9ECEF;
+            --text-dark: #2D3748;
+            --text-medium: #4A5568;
+            --shadow: rgba(0, 0, 0, 0.08);
+            
+            /* Typography */
+            --font-display: 'Sora', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Lexend", sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #F0F4F8 100%);
+            min-height: 100vh;
+        }
+       /* Hero Section */
+        .hero {
+    background:
+        linear-gradient(
+            to bottom,
+            white,
+            #37517e
+        );
+              padding: var(--spacing-xl) var(--spacing-md);
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* background: linear-gradient(135deg, rgba(74, 144, 226, 0.7) 0%, rgba(167, 139, 250, 0.7) 100%); */
+            z-index: 1;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .hero-video-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } 
+        
+        .hero h1 {
+            font-family: "Lexend", sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.15;
+            text-shadow: 0 4px 12px #FFD93D(0, 0, 0, 0.15);
+            letter-spacing: -0.5px;
+        }
+
+                .hero h4 {
+            font-family: "Lexend", sans-serif;
+            font-size: clamp(0.5rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.15;
+            text-shadow: 0 4px 12px #FFD93D(0, 0, 0, 0.15);
+            letter-spacing: -0.5px;
+        }
+                .hero-location {
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 600;
+            color: var(--white);
+
+    background-size: cover;
+    background-position: center;
+    /* rest of styles */            border: 2px solid var(--primary-accent);
+    background-color: ;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(240, 127, 133, 0.2),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero-subtitle {
+            text-shadow: 2px #FFD93D;
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            color: var(--white);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 500;
+            opacity: 0.95;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+        }
+        
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: 50px;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeIn 0.5s ease backwards;
+        }
+        
+        .badge:nth-child(1) { animation-delay: 0.2s; }
+        .badge:nth-child(2) { animation-delay: 0.3s; }
+        .badge:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+            margin-top: var(--spacing-lg);
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all var(--transition-medium);
+            font-family: "Lexend", sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.3px;
+        }
+        
+        .btn-primary {
+            background: var(--primary-yellow);
+            color: var(--text-dark);
+        }
+        
+        .btn-primary:hover {
+            background: #FFC700;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Section Styles */
+        section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== COMPARISON TABLE SECTION ===== */
+        .comparison-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: 0 10px 40px var(--shadow);
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            box-shadow: inset 0 0 0 1px rgba(74, 144, 226, 0.1);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        /* Table Header */
+        .comparison-table thead {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #5BA3F5 100%);
+        }
+
+        .comparison-table th {
+            padding: 1.5rem;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: left;
+            letter-spacing: 0.5px;
+            border: none;
+            position: relative;
+        }
+
+        .comparison-table th:first-child {
+            border-radius: 12px 0 0 0;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #5BA3F5 100%);
+        }
+
+        .comparison-table th:last-child {
+            border-radius: 0 12px 0 0;
+            background: linear-gradient(135deg, #5BA3F5 0%, var(--primary-blue) 100%);
+        }
+
+        .comparison-table th.our-solution {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #7FD888 100%);
+            color: var(--white);
+            font-weight: 700;
+        }
+        
+        /* Table Rows */
+        .comparison-table tbody tr {
+            border-bottom: 2px solid var(--light-gray);
+            transition: all var(--transition-medium);
+            position: relative;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: linear-gradient(90deg, rgba(74, 144, 226, 0.03) 0%, rgba(107, 203, 119, 0.03) 100%);
+        }
+
+        .comparison-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        /* Table Cells */
+        .comparison-table td {
+            padding: 1.25rem 1.5rem;
+            vertical-align: middle;
+            position: relative;
+            transition: all var(--transition-medium);
+            font-size: 0.95rem;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 600;
+            color: var(--text-dark);
+            background: rgba(74, 144, 226, 0.02);
+            min-width: 200px;
+        }
+
+        /* Our Solution Column - Highlight */
+        .comparison-table td.our-solution {
+            background: linear-gradient(135deg, rgba(107, 203, 119, 0.12) 0%, rgba(107, 203, 119, 0.05) 100%);
+            font-weight: 600;
+            color: #2D5A2D;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        /* Comparison Cells with Micro-Interaction */
+        .comparison-cell {
+            cursor: pointer;
+            position: relative;
+            transition: all var(--transition-medium);
+            font-weight: 500;
+            border-radius: 6px;
+            user-select: none;
+        }
+
+        .comparison-cell:hover {
+            transform: translateX(4px);
+            box-shadow: inset 0 0 0 2px rgba(74, 144, 226, 0.3);
+        }
+
+        .comparison-cell.yes {
+            color: #2D5A2D;
+            background: rgba(107, 203, 119, 0.08);
+        }
+
+        .comparison-cell.yes::before {
+            content: '✓ ';
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-green);
+            opacity: 0;
+            transition: opacity var(--transition-medium);
+        }
+
+        .comparison-cell.yes:hover::before {
+            opacity: 1;
+        }
+
+        .comparison-cell.no {
+            color: #8B7355;
+            background: rgba(150, 120, 100, 0.08);
+            opacity: 0.85;
+        }
+
+        .comparison-cell.no::before {
+            content: '− ';
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #C0A080;
+            opacity: 0;
+            transition: opacity var(--transition-medium);
+        }
+
+        .comparison-cell.no:hover::before {
+            opacity: 1;
+        }
+
+        .comparison-cell.partial {
+            color: var(--text-medium);
+            background: rgba(255, 159, 69, 0.08);
+        }
+
+        .comparison-cell.partial::before {
+            content: '◐ ';
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--primary-orange);
+            opacity: 0;
+            transition: opacity var(--transition-medium);
+        }
+
+        .comparison-cell.partial:hover::before {
+            opacity: 1;
+        }
+
+        /* ===== BENEFITS SECTION ===== */
+        .benefits-section {
+            padding-top: var(--spacing-xl);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px grey;
+            transition: all var(--transition-medium);
+            animation: fadeInScale 0.6s ease backwards;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            cursor: pointer;
+            position: relative;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .benefit-card:nth-child(1) { animation-delay: 0.4s; }
+        .benefit-card:nth-child(2) { animation-delay: 0.5s; }
+        .benefit-card:nth-child(3) { animation-delay: 0.6s; }
+        .benefit-card:nth-child(4) { animation-delay: 0.7s; }
+        .benefit-card:nth-child(5) { animation-delay: 0.8s; }
+        .benefit-card:nth-child(6) { animation-delay: 0.9s; }
+
+        .benefit-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 48px #37517e;;
+        }
+
+        .benefit-card:hover .benefit-image {
+            transform: scale(1.08) rotate(1deg);
+            filter: brightness(1.1);
+        }
+
+        .benefit-card:hover .benefit-stat-number {
+            transform: scale(1.12) rotate(-2deg);
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0) 0%, rgba(107, 203, 119, 0.05) 100%);
+            opacity: 0;
+            transition: opacity var(--transition-medium);
+            pointer-events: none;
+            border-radius: 16px;
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Image Container */
+        .benefit-image-container {
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #E8EEF5 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all var(--transition-medium);
+        }
+
+        .benefit-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+            color: var(--white);
+            transition: all var(--transition-medium);
+        }
+
+        /* Content Container */
+        .benefit-content {
+            padding: var(--spacing-lg);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-header {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .benefit-stat {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .benefit-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            transition: all var(--transition-medium);
+            font-family: "Sora", sans-serif;
+        }
+
+        .benefit-stat-unit {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            font-weight: 600;
+        }
+
+        .benefit-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.3;
+        }
+
+        .benefit-description {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .benefit-citation {
+            padding-top: var(--spacing-md);
+            font-size: 0.5rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .benefit-citation::before{
+            content: "Citation: ";
+        }
+
+        /* Color Variants for Benefit Cards */
+        .benefit-card:nth-child(1) .benefit-image-placeholder {
+            background: linear-gradient(135deg, #FFD93D 0%, #FFE66D 100%);
+        }
+
+        .benefit-card:nth-child(2) .benefit-image-placeholder {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+        }
+
+        .benefit-card:nth-child(3) .benefit-image-placeholder {
+            background: linear-gradient(135deg, #6BCB77 0%, #85E597 100%);
+        }
+
+        .benefit-card:nth-child(4) .benefit-image-placeholder {
+            background: linear-gradient(135deg, #4A90E2 0%, #6BA3F5 100%);
+        }
+
+        .benefit-card:nth-child(5) .benefit-image-placeholder {
+            background: linear-gradient(135deg, #A78BFA 0%, #C7B3FF 100%);
+        }
+
+        .benefit-card:nth-child(6) .benefit-image-placeholder {
+            background: linear-gradient(135deg, #FF9F45 0%, #FFB86C 100%);
+        }
+
+        .benefit-card:nth-child(1) .benefit-stat-number {
+            background:  #37517e;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .benefit-card:nth-child(2) .benefit-stat-number {
+            background: #005d0d;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .benefit-card:nth-child(3) .benefit-stat-number {
+            background: #37517e;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .benefit-card:nth-child(4) .benefit-stat-number {
+            background: #005d0d;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .benefit-card:nth-child(5) .benefit-stat-number {
+            background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .benefit-card:nth-child(6) .benefit-stat-number {
+            background: linear-gradient(135deg, #FF9F45 0%, #FF7043 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 var(--spacing-md);
+            }
+
+            .comparison-section {
+                padding: var(--spacing-md);
+            }
+
+            .benefit-content {
+                padding: var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 992px) {
+            :root {
+                --spacing-lg: 2rem;
+                --spacing-xl: 3rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th:first-child,
+            .comparison-table td:first-child {
+                min-width: 150px;
+            }
+
+            .benefit-image-container {
+                height: 180px;
+            }
+
+            .benefit-stat-number {
+                font-size: 2.2rem;
+            }
+
+            .benefit-title {
+                font-size: 1.2rem;
+            }
+
+            .benefit-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --spacing-lg: 1.5rem;
+                --spacing-xl: 2.5rem;
+                --spacing-md: 1rem;
+            }
+
+            /* Hero Section */
+            .hero {
+                min-height: 50vh;
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-top: var(--spacing-md);
+            }
+
+            /* Section Headers */
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-header p {
+                font-size: 0.95rem;
+            }
+
+            /* Comparison Table */
+            .comparison-table-wrapper {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .comparison-table {
+                min-width: 100%;
+                width: 100%;
+            }
+
+            .comparison-table thead {
+                background: linear-gradient(135deg, var(--primary-blue) 0%, #5BA3F5 100%);
+            }
+
+            .comparison-table th {
+                padding: 0.875rem 0.75rem;
+                font-size: 0.8rem;
+                font-weight: 600;
+                white-space: nowrap;
+            }
+
+            .comparison-table th:first-child {
+                min-width: 120px;
+            }
+
+            .comparison-table th.our-solution {
+                background: linear-gradient(135deg, var(--primary-green) 0%, #7FD888 100%);
+            }
+
+            .comparison-table tbody tr {
+                border-bottom: 2px solid var(--light-gray);
+            }
+
+            .comparison-table tbody tr:hover {
+                background: linear-gradient(90deg, rgba(74, 144, 226, 0.02) 0%, rgba(107, 203, 119, 0.02) 100%);
+            }
+
+            .comparison-table td {
+                padding: 0.875rem 0.75rem;
+                font-size: 0.8rem;
+                vertical-align: middle;
+            }
+
+            .comparison-table td:first-child {
+                min-width: 120px;
+                font-weight: 600;
+                background: rgba(74, 144, 226, 0.02);
+                white-space: normal;
+            }
+
+            .comparison-table td.our-solution {
+                background: linear-gradient(135deg, rgba(107, 203, 119, 0.12) 0%, rgba(107, 203, 119, 0.05) 100%);
+                border-left: 3px solid var(--primary-green);
+            }
+
+            .comparison-cell {
+                padding: 0.875rem 0.75rem;
+                margin: 0;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
+
+            .comparison-cell:hover {
+                transform: translateX(2px);
+            }
+
+            /* Benefits Grid */
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+                margin-top: var(--spacing-lg);
+            }
+
+            .benefit-card {
+                min-height: auto;
+            }
+
+            .benefit-image-container {
+                height: 160px;
+            }
+
+            .benefit-image-placeholder {
+                font-size: 3rem;
+            }
+
+            .benefit-content {
+                padding: var(--spacing-md);
+            }
+
+            .benefit-stat {
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .benefit-stat-number {
+                font-size: 2rem;
+            }
+
+            .benefit-stat-unit {
+                font-size: 0.85rem;
+            }
+
+            .benefit-title {
+                font-size: 1.1rem;
+                margin-bottom: var(--spacing-xs);
+            }
+
+            .benefit-description {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            /* Footer CTA */
+            .footer-cta {
+                padding: var(--spacing-lg) var(--spacing-md);
+                margin: var(--spacing-lg) 0;
+            }
+
+            .footer-cta h2 {
+                font-size: 1.5rem;
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .footer-cta p {
+                font-size: 0.95rem;
+                margin-bottom: var(--spacing-md);
+            }
+
+            .cta-button {
+                padding: 0.875rem 2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root {
+                --spacing-sm: 0.75rem;
+                --spacing-md: 1rem;
+                --spacing-lg: 1.25rem;
+                --spacing-xl: 2rem;
+            }
+
+            /* Hero Section */
+            .hero {
+                min-height: 45vh;
+                padding: var(--spacing-lg) var(--spacing-sm);
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                margin-bottom: var(--spacing-xs);
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+                margin-top: var(--spacing-sm);
+            }
+
+            /* Section Headers */
+            .section-header {
+                margin-bottom: var(--spacing-lg);
+            }
+
+            .section-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .section-header p {
+                font-size: 0.85rem;
+            }
+
+            section {
+                padding: var(--spacing-lg) 0;
+            }
+
+            /* Container */
+            .container {
+                padding: 0 var(--spacing-sm);
+            }
+
+            /* Comparison Section */
+            .comparison-section {
+                padding: var(--spacing-md);
+                margin-bottom: var(--spacing-lg);
+                border-radius: 12px;
+            }
+
+            .comparison-table-wrapper {
+                border-radius: 8px;
+                box-shadow: inset 0 0 0 1px rgba(74, 144, 226, 0.1);
+            }
+
+            .comparison-table th {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.7rem;
+                letter-spacing: 0px;
+            }
+
+            .comparison-table th:first-child {
+                min-width: 100px;
+                border-radius: 8px 0 0 0;
+            }
+
+            .comparison-table th:last-child {
+                border-radius: 0 8px 0 0;
+            }
+
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.7rem;
+            }
+
+            .comparison-table td:first-child {
+                min-width: 100px;
+                font-weight: 600;
+                white-space: normal;
+                word-break: break-word;
+            }
+
+            .comparison-table td.our-solution {
+                border-left: 2px solid var(--primary-green);
+            }
+
+            .comparison-cell {
+                padding: 0.75rem 0.5rem;
+                margin: 0;
+                border-radius: 3px;
+                font-size: 0.7rem;
+            }
+
+            .comparison-cell:hover {
+                transform: translateX(1px);
+                box-shadow: inset 0 0 0 1px rgba(74, 144, 226, 0.2);
+            }
+
+            .comparison-cell.yes::before,
+            .comparison-cell.no::before,
+            .comparison-cell.partial::before {
+                font-size: 0.9rem;
+                margin-right: 0.25rem;
+            }
+
+            /* Benefits Grid */
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+                margin-top: var(--spacing-lg);
+            }
+
+            .benefit-card {
+                border-radius: 12px;
+                box-shadow: 0 4px 16px var(--shadow);
+            }
+
+            .benefit-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+            }
+
+            .benefit-image-container {
+                height: 140px;
+            }
+
+            .benefit-image-placeholder {
+                font-size: 2.5rem;
+            }
+
+            .benefit-content {
+                padding: var(--spacing-md);
+            }
+
+            .benefit-header {
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .benefit-stat {
+                margin-bottom: var(--spacing-xs);
+            }
+
+            .benefit-stat-number {
+                font-size: 1.8rem;
+            }
+
+            .benefit-stat-unit {
+                font-size: 0.75rem;
+            }
+
+            .benefit-title {
+                font-size: 1rem;
+                margin-bottom: var(--spacing-xs);
+                line-height: 1.3;
+            }
+
+            .benefit-description {
+                font-size: 0.8rem;
+                line-height: 1.4;
+            }
+
+            /* Footer CTA */
+            .footer-cta {
+                padding: var(--spacing-lg) var(--spacing-sm);
+                margin: var(--spacing-lg) 0;
+                border-radius: 12px;
+            }
+
+            .footer-cta h2 {
+                font-size: 1.25rem;
+                margin-bottom: var(--spacing-xs);
+            }
+
+            .footer-cta p {
+                font-size: 0.85rem;
+                margin-bottom: var(--spacing-md);
+                line-height: 1.6;
+            }
+
+            .cta-button {
+                display: inline-block;
+                padding: 0.75rem 1.75rem;
+                background: var(--white);
+                color: var(--primary-blue);
+                border: none;
+                border-radius: 50px;
+                font-weight: 700;
+                font-size: 0.85rem;
+                cursor: pointer;
+                transition: all var(--transition-medium);
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            }
+
+            .cta-button:active {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 400px) {
+            :root {
+                --spacing-xs: 0.4rem;
+                --spacing-sm: 0.6rem;
+                --spacing-md: 0.8rem;
+                --spacing-lg: 1rem;
+                --spacing-xl: 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.25rem;
+            }
+
+            .hero p {
+                font-size: 0.8rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .section-header p {
+                font-size: 0.8rem;
+            }
+
+            .comparison-table th {
+                padding: 0.6rem 0.4rem;
+                font-size: 0.65rem;
+            }
+
+            .comparison-table th:first-child {
+                min-width: 90px;
+            }
+
+            .comparison-table td {
+                padding: 0.6rem 0.4rem;
+                font-size: 0.65rem;
+            }
+
+            .comparison-table td:first-child {
+                min-width: 90px;
+            }
+
+            .comparison-cell {
+                padding: 0.6rem 0.4rem;
+                font-size: 0.65rem;
+            }
+
+            .benefit-image-container {
+                height: 120px;
+            }
+
+            .benefit-image-placeholder {
+                font-size: 2rem;
+            }
+
+            .benefit-stat-number {
+                font-size: 1.5rem;
+            }
+
+            .benefit-stat-unit {
+                font-size: 0.7rem;
+            }
+
+            .benefit-title {
+                font-size: 0.95rem;
+            }
+
+            .benefit-description {
+                font-size: 0.75rem;
+            }
+
+            .footer-cta h2 {
+                font-size: 1.1rem;
+            }
+
+            .footer-cta p {
+                font-size: 0.8rem;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Tablet Landscape */
+        @media (max-width: 1024px) and (orientation: landscape) {
+            .hero {
+                min-height: 60vh;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem;
+            }
+        }
+
+        /* Ensure smooth scrolling on all devices */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent horizontal scrolling */
+        body, .container {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        /* Ensure all tables are properly scrollable on mobile */
+        @supports (overflow: -webkit-paged-x) {
+            .comparison-table-wrapper {
+                -webkit-overflow-scrolling: touch;
+                overflow-x: auto;
+            }
+        }
+
+        /* Fix for iPhone and iPad */
+        @media (max-width: 767px) {
+            input, textarea, select {
+                font-size: 16px;
+            }
+        }
+
+        /* CTA Section */
+        .footer-cta {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+            color: var(--white);
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+            border-radius: 16px;
+            margin: var(--spacing-xl) 0;
+            animation: fadeInUp 0.8s ease 1s backwards;
+        }
+
+        .footer-cta h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: var(--spacing-md);
+            font-weight: 700;
+        }
+
+        .footer-cta p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--primary-blue);
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-medium);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+ /* From Uiverse.io by mobinkakei */ 
+.cta {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #B31942;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg);
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #37517e ;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+/* Second CTA button */
+
+.cta-two {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background: rgba(55, 81, 126);
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-two:focus {
+  outline: none;
+}
+
+.cta-two:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #B31942;
+}
+
+.cta-two .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta-two:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span-two {
+  transform: skewX(15deg);
+}
+
+.second-two {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta-two:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta-two:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta-two:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #37517e ;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+.swiper {
+font-size: 32px;
+}
+.swiper img{
+    max-width: 32px;
+    max-height: 32px;
+    display: inline;
+}
+    </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Load Header
+      fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        })
+        .catch(err => console.error("Header load error:", err));
+
+    //   // Load Footer
+    //   fetch("footer.html")
+    //     .then(response => response.text())
+    //     .then(data => {
+    //       document.getElementById("footer").innerHTML = data;
+    //     })
+    //     .catch(err => console.error("Footer load error:", err));
+    });
+  </script>
+
+</head>
+<body>
+    <div id="header"></div>
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <!-- Video Background Container -->
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <!-- Replace with your video URL -->
+                <source src="./Assets/Video/flag_header.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img class="hero-video-fallback" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop" alt="Championship Background">
+            </video>
+        </div>
+        
+        <!-- Overlay gradient for text readability -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #37517e; opacity: 60%;"></div>
+        
+        <div class="hero-content">
+                      
+            <h1 style="margin-bottom: 0; padding-bottom: 0;">COMPUDON Junior </h1>
+            <h4 style="margin-top: 0; padding-top: 0; margin-bottom: 5%;">North America</h4  >
+            <p class="hero-subtitle">Learn why we attract the best of the best</p>
+
+            
+            <div class="cta-buttons">
+<button class="cta">
+  <span class="span">Register</span>
+  <span class="second">
+    <svg
+      width="50px"
+      height="20px"
+      viewBox="0 0 66 43"
+      version="1.1"
+    >
+      <g
+        id="arrow"
+        stroke="none"
+        stroke-width="1"
+        fill="none"
+        fill-rule="evenodd"
+      >
+        <path
+          class="one"
+          d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+          fill="#FFFFFF"
+        ></path>
+        <path
+          class="two"
+          d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+          fill="#FFFFFF"
+        ></path>
+        <path
+          class="three"
+          d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+          fill="#FFFFFF"
+        ></path>
+      </g>
+    </svg>
+  </span>
+</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Comparison Section -->
+        <section>
+            <div class="section-header">
+                <h2>How We Compare</h2>
+                <p>Compare between different championships on the below skills taught and tested, to find the one best for your child</p>
+            </br>
+                <p class="swiper"> <img src="./Assets/Img/Icons/swipe.png" alt=""> Swipe left/right across table if on mobile</p>
+            </div>
+
+            <div class="comparison-section">
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Does it teach the following?</th>
+                                <th class="our-solution">Our Championship</th>
+                                <th>Cybersecurity Competitions</th>
+                                <th>Robotics Competitions</th>
+                                <th>Generic Digital Literacy Programs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Awards and Distinction</td>
+                                <td class="our-solution comparison-cell yes">Yes</td>
+                                <td class="comparison-cell yes">Yes</td>
+                                <td class="comparison-cell yes">Yes</td>
+                                <td class="comparison-cell no">Not Available</td>
+                            </tr>
+                            <tr>
+                                <td>Maintaining all safety needs of children</td>
+                                <td class="our-solution comparison-cell yes">Yes</td>
+                                <td class="comparison-cell partial">Enterprise Security taught, not child specific threats</td>
+                                <td class="comparison-cell no">Not Available</td>
+                                <td class="comparison-cell no">Not Available</td>
+                            </tr>
+                            <tr>
+                                <td>How to Think Critically and be Creative</td>
+                                <td class="our-solution comparison-cell yes">Yes</td>
+                                <td class="comparison-cell no">Not Available</td>
+                                <td class="comparison-cell no">Not Available</td>
+                                <td class="comparison-cell no">Not Available</td>
+                            </tr>
+                            <tr>
+                                <td>Artificial Intelligence Literacy, including impact on humans</td>
+                                <td class="our-solution comparison-cell yes">Yes, as per exact academic and emotional needs of Children</td>
+                                <td class="comparison-cell partial">Technical view, for Enterprise Cybersecurity</td>
+                                <td class="comparison-cell partial">Technical view, for Robotics Creation</td>
+                                <td class="comparison-cell partial">What is AI and why it matters</td>
+                            </tr>
+                            <tr>
+                                <td>Media Literacy and its impact, including mental health</td>
+                                <td class="our-solution comparison-cell yes">Yes, specifically taught as per child psychology</td>
+                                <td class="comparison-cell no">Not available</td>
+                                <td class="comparison-cell no">Not available</td>
+                                <td class="comparison-cell partial">Generic advice on misinformation and disinformation</td>
+                            </tr>
+                            <tr>
+                                <td>Optimized teaching methods for children, such as rhymes and stories</td>
+                                <td class="our-solution comparison-cell yes">Yes, in all chapters and specifically designed for relatability</td>
+                                <td class="comparison-cell no">Not available</td>
+                                <td class="comparison-cell no">Not available</td>
+                                <td class="comparison-cell no">Not available</td>
+                            </tr>
+                            <tr>
+                                <td>Inspired by cutting-edge research papers on child psychology needs</td>
+                                <td class="our-solution comparison-cell yes">Specially built on the most credible recommendations </td>
+                                <td class="comparison-cell no">Not Available</td>
+                                <td class="comparison-cell no">Not Available</td>
+                                <td class="comparison-cell no">Not Available</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="section-header">
+                <h2>What You Gain, Beyond Awards</h2>
+                <p>Discover why the skills we teach matter, and the powerful benefits every committed participant in our championship gains</p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Benefit 1: Academic Growth  -->
+                <div class="benefit-card">
+                    <div class="benefit-image-container">
+                        <div><img src="./Assets/Img/student_happy.jpg" class="benefit-image"></div>
+                    </div>
+                    <div class="benefit-content">
+                        <div class="benefit-header">
+                            <div class="benefit-stat">
+                                <span class="benefit-stat-number">85%</span>
+                                <span class="benefit-stat-unit"> growth</span>
+                            </div>
+                            <h3 class="benefit-title">In academic performance</h3>
+                        </div>
+                        <p class="benefit-description">Students trained on using Generative AI for boosting academic learning and understanding were found to have 85% better academic scores after using these methods </p>
+                        <p class="benefit-citation"> Liu, X., Guo, B., et al. (2025). Effects of generative artificial intelligence on K-12 and higher education students’ learning outcomes: A meta-analysis. Journal of Educational Computing Research. Advance online publication. https://doi.org/10.1177/07356331251329185</p>
+                    </div>
+                </div>
+
+                <!-- 43%, growth Students were found to have significantly increased academic scores after learning critical thinking and creativity for academic contexts Orhan, A. . (2022). The Relationship between Critical Thinking and Academic Achievement: A Meta-Analysis Study. Psycho-Educational Research Reviews, 11(1), 283–299. https://doi.org/10.52963/PERR_Biruni_V11.N1.18-->
+
+                <!-- Benefit 2: Creative Learning -->
+                <div class="benefit-card">
+                    <div class="benefit-image-container">
+                        <div><img src="./Assets/Img/student_creative.jpg" class="benefit-image"></div>
+                    </div>
+                    <div class="benefit-content">
+                        <div class="benefit-header">
+                            <div class="benefit-stat">
+                                <span class="benefit-stat-number">99%</span>
+                                <span class="benefit-stat-unit">outperformed</span>
+                            </div>
+                            <h3 class="benefit-title">By creative-learning</h3>
+                        </div>
+                        <p class="benefit-description">Average students placed in creative-learning groups outperformed 99% of students in non-creative learning groups, regardless of earlier academic performance</p>
+                        <p class="benefit-citation">Huang, G., Jia, W., & Yu, W. (2024). Media literacy interventions improve resilience to misinformation: A meta-analytic investigation of overall effect and moderating factors. Communication Research. Advance online publication. https://doi.org/10.1177/00936502241288103 </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Digital Safety -->
+                <div class="benefit-card">
+                    <div class="benefit-image-container">
+                        <div><img src="./Assets/Img/student_safe.jpg" class="benefit-image"></div>
+                    </div>
+                    <div class="benefit-content">
+                        <div class="benefit-header">
+                            <div class="benefit-stat">
+                                <span class="benefit-stat-number">73%</span>
+                                <span class="benefit-stat-unit">reduction</span>
+                            </div>
+                            <h3 class="benefit-title">In likelihood of harm</h3>
+                        </div>
+                        <p class="benefit-description">Students who were trained on evidence-based cyber safety programs were found to be 73% less likely to sustain any significant impact from cyberbullying</p>
+                        <p class="benefit-citation">Polanin JR, Espelage DL, Grotpeter JK, Ingram K, Michaelson L, Spinney E, Valido A, Sheikh AE, Torgal C, Robinson L. A Systematic Review and Meta-analysis of Interventions to Decrease Cyberbullying Perpetration and Victimization. Prev Sci. 2022 Apr;23(3):439-454. doi: 10.1007/s11121-021-01259-y. Epub 2021 Jun 22. PMID: 34159506; PMCID: PMC8218972.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4: High Order Thinking  -->
+                <div class="benefit-card">
+                    <div class="benefit-image-container">
+                        <div><img src="./Assets/Img/student_genius.jpg" class="benefit-image"></div>
+                    </div>
+                    <div class="benefit-content">
+                        <div class="benefit-header">
+                            <div class="benefit-stat">
+                                <span class="benefit-stat-number">58%</span>
+                                <span class="benefit-stat-unit">growth</span>
+                            </div>
+                            <h3 class="benefit-title">In high-order thinking</h3>
+                        </div>
+                        <p class="benefit-description">Students who know how to use Generative AI to improve thinking and learning were found to be 58% better at High Order Thinking Skills (innovation, complex problem solving and others)</p>
+                        <p class="benefit-citation">Chen, S., & Cheung, A. H. S. (2025). Effect of generative artificial intelligence on university students learning outcomes: A systematic review and meta-analysis. Educational Research Review, 49, 100737. https://doi.org/10.1016/j.edurev.2025.100737</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 5: Real Skills
+                <div class="benefit-card">
+                    <div class="benefit-image-container">
+                        <div class="benefit-image-placeholder">⚡</div>
+                    </div>
+                    <div class="benefit-content">
+                        <div class="benefit-header">
+                            <div class="benefit-stat">
+                                <span class="benefit-stat-number">72%</span>
+                                <span class="benefit-stat-unit">growth</span>
+                            </div>
+                            <h3 class="benefit-title">In Problem-Solving</h3>
+                        </div>
+                        <p class="benefit-description">Students participating in collaborative challenge-solving environments were found to be approximately 72% better at problem-solving than students trained in traditional individual instruction environments.</p>
+                        <p class="benefit-citation">Qin, Z., Johnson, D. W., & Johnson, R. T. (1995). Cooperative versus competitive efforts and problem solving. Review of Educational Research, 65(2), 129–143. https://doi.org/10.3102/00346543065002129</p>
+                    </div>
+                </div> -->
+
+                <!-- Benefit 6: Unforgettable Experience
+                <div class="benefit-card">
+                    <div class="benefit-image-container">
+                        <div class="benefit-image-placeholder">✨</div>
+                    </div>
+                    <div class="benefit-content">
+                        <div class="benefit-header">
+                            <div class="benefit-stat">
+                                <span class="benefit-stat-number">1</span>
+                                <span class="benefit-stat-unit">Life-Changing Journey</span>
+                            </div>
+                            <h3 class="benefit-title">Create Unforgettable Memories</h3>
+                        </div>
+                        <p class="benefit-description">Experience an extraordinary competition that becomes a turning point in your personal growth and potential.</p>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+
+    <script>
+        // Simple hover interactions for comparison cells
+        const comparisonCells = document.querySelectorAll('.comparison-cell');
+        
+        comparisonCells.forEach(cell => {
+            cell.addEventListener('click', function(e) {
+                // Add a subtle pulse animation on click
+                this.style.animation = 'none';
+                setTimeout(() => {
+                    this.style.animation = 'pulse 0.4s ease';
+                }, 10);
+            });
+        });
+
+        // Add pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.02);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.section-header').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

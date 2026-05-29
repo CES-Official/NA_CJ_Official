@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Objectives - COMPUDON Junior</title>
+    <link rel="icon" type="image/png" href="./Assets/Img/Icons/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Quicksand&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Primary Colors */
+            --primary-yellow: #FFD93D;
+            --primary-blue: #4A90E2;
+            --primary-coral: #FF6B6B;
+            --primary-green: #6BCB77;
+            --primary-purple: #A78BFA;
+            --primary-orange: #FF9F45;
+            --primary-pink: #FF6BA6;
+            
+            /* Grade-Specific Colors */
+            --grades-3-5-primary: #4A90E2;
+            --grades-3-5-accent: #6BCB77;
+            --grades-6-above-primary: #2D3E50;
+            --grades-6-above-accent: #FF6BA6;
+            
+            /* Neutral Colors */
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --gray: #E9ECEF;
+            --dark-gray: #D3D3D3;
+            --text-dark: #2D3748;
+            --text-medium: #4A5568;
+            --text-light: #718096;
+            
+            /* Typography */
+            --font-display: 'Sora', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2.5rem;
+            --spacing-xl: 4rem;
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Lexend", sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, var(--light-gray) 0%, #F0F4F8 100%);
+            min-height: 100vh;
+        }
+
+        /* Header */
+               .hero {
+    background:
+        linear-gradient(
+            to bottom,
+            white,
+            #37517e
+        );
+              padding: var(--spacing-xl) var(--spacing-md);
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* background: linear-gradient(135deg, rgba(74, 144, 226, 0.7) 0%, rgba(167, 139, 250, 0.7) 100%); */
+            z-index: 1;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .hero-video-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } 
+        
+        .hero h1 {
+            font-family: "Lexend", sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--spacing-xl);
+            line-height: 1.15;
+            text-shadow: 0 4px 12px #FFD93D(0, 0, 0, 0.15);
+            letter-spacing: -0.5px;
+        }
+
+                .hero h4 {
+            font-family: "Lexend", sans-serif;
+            font-size: clamp(1.55rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.15;
+            text-shadow: 0 4px 12px #FFD93D(0, 0, 0, 0.15);
+            letter-spacing: -0.5px;
+        }
+                .hero-location {
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 600;
+            color: var(--white);
+
+    background-size: cover;
+    background-position: center;
+    /* rest of styles */            border: 2px solid var(--primary-accent);
+    background-color: ;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(240, 127, 133, 0.2),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero-subtitle {
+            text-shadow: 2px #FFD93D;
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            color: var(--white);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            font-weight: 500;
+            opacity: 0.95;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+        }
+        
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin-bottom: var(--spacing-lg);
+        }
+ 
+        .page-header {
+            background: linear-gradient(135deg, var(--grades-3-5-primary) 0%, var(--grades-3-5-accent) 100%);
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 35vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(166, 47, 47, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            width: 100%;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            letter-spacing: -0.5px;
+        }
+
+        .page-header p {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Grade Section */
+        .grade-section {
+            padding: var(--spacing-xl) var(--spacing-md);
+            scroll-margin-top: 100px;
+        }
+
+        /* .grade-section.grades-3-5 {
+            background: linear-gradient(180deg, rgba(74, 144, 226, 0.05) 0%, rgba(107, 203, 119, 0.05) 100%);
+            /* border-top: 4px solid var(--grades-3-5-primary); */
+        } */
+
+        /* .grade-section.grades-6-above {
+            background: linear-gradient(180deg, rgba(45, 62, 80, 0.05) 0%, rgba(255, 107, 166, 0.05) 100%);
+            /* border-top: 4px solid var(--grades-6-above-primary); */
+        } */
+
+        .grade-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .grade-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            margin-bottom: clamp(2rem, 1rem, 2rem);
+            transform: skew(-20deg);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all var(--transition-fast);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .grade-badge span {
+            transform: skew(20deg);
+        }
+
+        .grade-badge img{
+            max-width: 32px;
+            max-width: 32px;
+        }
+
+        .grade-section.grades-3-5 .grade-badge {
+            /* background: var(--grades-3-5-primary); */
+            color: var(--text-dark);
+            font-size: xx-large;
+        }
+
+        .grade-section.grades-6-above .grade-badge {
+            /* background: ; */
+            color: var(--grades-6-above-primary);
+            font-size: 32px;
+        }
+
+        .grade-badge:hover {
+                transform: skew(-20deg) translateY(-6px);
+
+            /* transform: translateX(-2px); */
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .grade-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            flex: 1;
+        }
+
+        /* Domains Grid */
+        .domains-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        /* Domain Card */
+        .domain-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: var(--spacing-lg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all var(--transition-medium);
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: inline;   
+        }
+
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            transition: all var(--transition-fast);
+        }
+
+        .grades-3-5 .domain-card::before {
+            background: #37517e;
+        }
+
+        .grades-6-above .domain-card::before {
+            background: #37517e;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            border-color: rgba(74, 144, 226, 0.2);
+        }
+
+        /* .domain-card:active {
+            transform: translateY(-2px);
+        } */
+
+        .domain-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .domain-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            transition: all var(--transition-fast);
+        }
+        .domain-icon img {
+            max-width: 32px;
+            max-height: 32px;
+        }
+
+        .grades-3-5 .domain-card .domain-icon {
+            background: rgba(74, 144, 226, 0.15);
+            color: var(--grades-3-5-primary);
+        }
+
+        .grades-6-above .domain-card .domain-icon {
+            background: rgba(45, 62, 80, 0.15);
+            color: var(--grades-6-above-primary);
+        }
+
+        .domain-card:hover .domain-icon {
+            transform: scale(1.1);
+        }
+
+        .domain-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        /* Objectives List */
+        .objectives-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .objective-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm);
+            border-radius: 10px;
+            transition: all var(--transition-fast);
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .objective-item:hover {
+            background: rgba(0, 0, 0, 0.04);
+            transform: translateX(4px);
+        }
+
+        .objective-bullet {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            position: relative;
+            top: 2px;
+        }
+
+        .grades-3-5 .objective-bullet {
+            background: var(--grades-3-5-accent);
+            color: var(--white);
+        }
+
+        .grades-6-above .objective-bullet {
+        background: color-mix(in srgb, var(--grades-6-above-accent) 60%, transparent);
+            color: var(--white);
+        }
+
+        .objective-text {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            transition: all var(--transition-fast);
+            margin-top: var(--spacing-sm);
+            width: fit-content;
+        }
+
+        .status-badge.active {
+            background: rgba(107, 203, 119, 0.2);
+            color: #2D5A2D;
+            border: 1px solid rgba(107, 203, 119, 0.4);
+        }
+
+        .status-badge.active::before {
+            content: '✓';
+            font-weight: 700;
+        }
+
+        .grades-3-5 .domain-card {
+            --domain-accent: var(--grades-3-5-accent);
+        }
+
+        .grades-6-above .domain-card {
+            --domain-accent: var(--grades-6-above-accent);
+        }
+
+        /* Mini Indicator Dots */
+        .indicator-dots {
+            display: flex;
+            gap: 0.35rem;
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            transition: all var(--transition-fast);
+        }
+
+        .grades-3-5 .domain-card .dot {
+            background: rgba(74, 144, 226, 0.3);
+        }
+
+        .grades-3-5 .domain-card .dot.active {
+            background: var(--grades-3-5-accent);
+            transform: scale(1.3);
+        }
+
+        .grades-6-above .domain-card .dot {
+            background: rgba(45, 62, 80, 0.3);
+        }
+
+        .grades-6-above .domain-card .dot.active {
+            background: var(--grades-6-above-accent);
+            transform: scale(1.3);
+        }
+
+        /* Footer Section */
+        .objectives-footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #3a4a5c 100%);
+            color: var(--white);
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+            border-top: 2px solid var(--primary-yellow);
+            margin-top: var(--spacing-xl);
+        }
+
+        .objectives-footer h3 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: var(--spacing-md);
+            font-family: var(--font-display);
+        }
+
+        .objectives-footer p {
+            font-size: 1rem;
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: 0.75rem 2rem;
+            background: var(--primary-yellow);
+            color: var(--text-dark);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition-medium);
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(255, 217, 61, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 217, 61, 0.4);
+        }
+
+        /* .cta-button:active {
+            transform: translateY(0);
+        } */
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grade-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                min-height: 28vh;
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+
+            .grade-section {
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+        }
+
+        /* Accessibility */
+        .domain-card:focus {
+            outline: 2px solid var(--primary-blue);
+            outline-offset: 2px;
+        }
+
+        /* Animation on load */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .domain-card {
+            animation: fadeInScale 0.4s ease forwards;
+        }
+
+        .grades-3-5 .domain-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .grades-3-5 .domain-card:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .grades-3-5 .domain-card:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .grades-3-5 .domain-card:nth-child(4) {
+            animation-delay: 0.25s;
+        }
+
+        .grades-6-above .domain-card:nth-child(1) {
+            animation-delay: 0.35s;
+        }
+
+        .grades-6-above .domain-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .grades-6-above .domain-card:nth-child(3) {
+            animation-delay: 0.45s;
+        }
+
+        .grades-6-above .domain-card:nth-child(4) {
+            animation-delay: 0.5s;
+        }
+
+        .footer-cta {
+            padding: var(--spacing-xl) var(--spacing-md);
+            background-color: var(--white);
+            border-top: 3px solid var(--gray);
+        }
+        
+        .footer-cta h2 {
+            font-family: "Lexend", sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+            letter-spacing: -0.5px;
+        }
+        
+        .footer-cta p {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+          .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+            margin-top: var(--spacing-lg);
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all var(--transition-medium);
+            font-family: "Lexend", sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.3px;
+        }
+        
+        .btn-primary {
+            background: var(--primary-yellow);
+            color: var(--text-dark);
+        }
+        
+        .btn-primary:hover {
+            background: #FFC700;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Icon SVG Styles */
+        .icon-svg {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+
+          /* From Uiverse.io by mobinkakei */ 
+.cta {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #B31942;
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span {
+  transform: skewX(15deg);
+}
+
+.second {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #37517e ;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+      /* Second CTA button */
+
+.cta-two {
+  display: flex;
+  padding: 11px 33px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background: rgba(55, 81, 126);
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-two:focus {
+  outline: none;
+}
+
+.cta-two:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #B31942;
+}
+
+.cta-two .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta-two:hover .second {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.span-two {
+  transform: skewX(15deg);
+}
+
+.second-two {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta-two:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta-two:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta-two:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #37517e ;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+    </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Load Header
+      fetch("./header.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header").innerHTML = data;
+        })
+        .catch(err => console.error("Header load error:", err));
+
+      // Load Footer
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        })
+        .catch(err => console.error("Footer load error:", err));
+    });
+  </script>
+
+</head>
+<body>
+    <div id="header"></div>
+    <!-- Header -->
+      <section class="hero">
+        <!-- Video Background Container -->
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <!-- Replace with your video URL -->
+                <source src="./Assets/Video/flag_header.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img class="hero-video-fallback" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop" alt="Championship Background">
+            </video>
+        </div>
+        
+        <!-- Overlay gradient for text readability -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #37517e; opacity: 60%;"></div>
+        
+        <div class="hero-content">
+                      
+            <h1 style="margin-bottom: 0; padding-bottom: 0;">COMPUDON Junior </h1>
+            <h4 style="font-size: xx-large; margin-top: 0; padding-top: 0; margin-bottom: 5%;">North America's</h4>
+            <h4>Official Exam Objectives</h4>
+                        <div class="cta-buttons">
+<button class="cta">
+  <span class="span">Register</span>
+  <span class="second">
+    <svg
+      width="50px"
+      height="20px"
+      viewBox="0 0 66 43"
+      version="1.1"
+    >
+      <g
+        id="arrow"
+        stroke="none"
+        stroke-width="1"
+        fill="none"
+        fill-rule="evenodd"
+      >
+        <path
+          class="one"
+          d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+          fill="#FFFFFF"
+        ></path>
+        <path
+          class="two"
+          d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+          fill="#FFFFFF"
+        ></path>
+        <path
+          class="three"
+          d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+          fill="#FFFFFF"
+        ></path>
+      </g>
+    </svg>
+  </span>
+</button>
+            </div>
+            
+        </div>
+        
+    </section>
+
+
+    <!-- Grades 3-5 Section -->
+    <section class="grade-section grades-3-5">
+        <div class="container">
+            <div class="grade-header">
+                <div class="grade-badge"><img src="./Assets/Img/Icons/books.png" style="padding-right: 10px;"> <span> Grades 3–5 </span></div>
+                <h2 style="text-align: center;">Objective Domains</h2>
+            </div>
+
+            <div class="domains-grid">
+                <!-- Domain 1: Digital Safety and Online Protection -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"> <img src="./Assets/Img/Icons/ninja.png" alt=""></div>
+                        <h3 class="domain-title">Digital Safety and Online Protection</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Staying Safe During Online Interactions</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Protecting Personal Information Online</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domain 2: Critical Thinking & Creativity -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"><img src="/Assets/Img/Icons/genius.png" alt=""></div>
+                        <h3 class="domain-title">Critical Thinking & Creativity</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Thinking Critically and Asking Better Questions</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Growing as a Problem-Solver and Learner</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Domain 3: Media Literacy and Online Information -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"><img src="./Assets/Img/Icons/detective.png" alt=""></div>
+                        <h3 class="domain-title">Media Literacy and Online Information</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Spotting False and Misleading Content</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Thinking Before Believing or Sharing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domain 4: AI Awareness and Responsible Technology Use -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"><img src="./Assets/Img/Icons/ai.png" alt=""></div>
+                        <h3 class="domain-title">AI Awareness and Responsible Technology Use</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Understanding AI and How It Works</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Using AI Tools Safely and Wisely</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grades 6+ Section -->
+    <section class="grade-section grades-6-above">
+        <div class="container">
+            <div class="grade-header">
+                <div class="grade-badge"> <span><img src="./Assets/Img/Icons/genius.png" style="padding-right: 10px;">  Grades 6 & Above </span></div>
+                <h2 style="text-align: center;">Objective Domains</h2>
+            </div>
+
+            <div class="domains-grid">
+                <!-- Domain 1: Digital Safety and Responsible Online Participation -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"> <img src="./Assets/Img/Icons/ninja.png"> </div>
+                        <h3 class="domain-title">Digital Safety and Responsible Online Participation</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Managing Unsafe and Harmful Online Interactions</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Evaluating Digital Content and Resisting Manipulation</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Protecting Privacy and Digital Identity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domain 2: Critical Thinking, Creativity, and Learning Strategies -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"><img src="./Assets/Img/Icons/genius.png" alt=""></div>
+                        <h3 class="domain-title">Critical Thinking, Creativity, and Learning Strategies</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Using Creativity to Support Learning</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Designing Effective Learning Strategies</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Growing Problem-Solving Skills</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domain 3: Media Literacy and Information Evaluation -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"><img src="./Assets/Img/Icons/detective.png" alt=""></div>
+                        <h3 class="domain-title">Media Literacy and Information Evaluation</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Spotting False or Misleading Information</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Understanding How Online Information Can Influence Us</span>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Practice identifying bad media online</span>
+                        </div>
+                </div>
+
+                <!-- Domain 4: AI Literacy and Responsible Technology Use -->
+                <div class="domain-card" tabindex="0">
+                    <div class="domain-header">
+                        <div class="domain-icon"><img src="./Assets/Img/Icons/ai.png" alt=""></div>
+                        <h3 class="domain-title">AI Literacy and Responsible Technology Use</h3>
+                    </div>
+                    <div class="objectives-list">
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Understanding AI and Its Limitations</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Using AI Tools Safely and Wisely</span>
+                        </div>
+                        <div class="objective-item">
+                            <div class="objective-bullet">•</div>
+                            <span class="objective-text">Using AI in Safe and Responsible Ways</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+    <script>
+        // Add micro-interaction to domain cards
+        const domainCards = document.querySelectorAll('.domain-card');
+        
+        domainCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-6px) scale(1.01)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+            
+        //     card.addEventListener('click', function() {
+        //         this.style.transform = 'translateY(-3px)';
+        //         setTimeout(() => {
+        //             this.style.transform = '';
+        //         }, 200);
+        //     });
+        // });
+
+        // Animate indicator dots on interaction
+        domainCards.forEach(card => {
+            const dots = card.querySelectorAll('.dot');
+            card.addEventListener('mouseenter', () => {
+                dots.forEach((dot, index) => {
+                    setTimeout(() => {
+                        dot.style.transform = 'scale(1.2)';
+                        setTimeout(() => {
+                            dot.style.transform = 'scale(1)';
+                        }, 150);
+                    }, index * 50);
+                });
+            });
+        });
+
+        // // Keyboard interaction
+        // domainCards.forEach(card => {
+        //     card.addEventListener('keypress', (e) => {
+        //         if (e.key === 'Enter' || e.key === ' ') {
+        //             e.preventDefault();
+        //             card.click();
+        //             card.focus();
+        //         }
+        //     });
+        // });
+
+        // Download function
+        function downloadCurriculum() {
+            alert('📥 Curriculum guide download will begin shortly. Thank you for your interest!');
+        }
+
+        // Intersection Observer for staggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.animation = `fadeInScale 0.5s ease ${index * 0.05}s forwards`;
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.domain-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

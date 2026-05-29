@@ -1,0 +1,44 @@
+<!-- Trust Section with Slider -->
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">Trusted by Education Leaders</h2>
+            
+            <div class="trust-slider-wrapper">
+                <button class="slider-nav prev" onclick="moveSlide(-1)" aria-label="Previous trust badge">
+                    ←
+                </button>
+                
+                <div class="trust-slider">
+                    <div class="trust-slider-track" id="sliderTrack">
+                        <div class="trust-badge-slide">
+                            <div class="trust-logo-container">📚</div>
+                            <span>Endorsed by Department of Education in Canada & USA</span>
+                        </div>
+                        <div class="trust-badge-slide">
+                            <div class="trust-logo-container">🛡️</div>
+                            <span>Certified Child Safety & Privacy Protection Standards</span>
+                        </div>
+                        <div class="trust-badge-slide">
+                            <div class="trust-logo-container">🏆</div>
+                            <span>Award-Winning Program with Proven Results</span>
+                        </div>
+                        <div class="trust-badge-slide">
+                            <div class="trust-logo-container">🔬</div>
+                            <span>Built on Research-Based Pedagogical Framework</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="slider-nav next" onclick="moveSlide(1)" aria-label="Next trust badge">
+                    →
+                </button>
+            </div>
+            
+            <div class="slider-dots" id="sliderDots">
+                <button class="dot active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+                <button class="dot" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+                <button class="dot" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+                <button class="dot" onclick="goToSlide(3)" aria-label="Slide 4"></button>
+            </div>
+        </div>
+    </section>
